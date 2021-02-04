@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-native/file-transfer/ngx';
-import { File } from '@ionic-native/file';
+import { File } from '@ionic-native/file/ngx';
 
 @Component({
   selector: 'app-home',
@@ -9,8 +9,8 @@ import { File } from '@ionic-native/file';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-
-  constructor(private transfer: FileTransfer, private file: File) {}
+ 
+  constructor(private transfer: FileTransfer, private file: File ) {}
 
   download() {
     const fileTransfer: FileTransferObject = this.transfer.create();
